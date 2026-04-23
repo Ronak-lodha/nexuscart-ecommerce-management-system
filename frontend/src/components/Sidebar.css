@@ -1,0 +1,150 @@
+.sidebar {
+    width: 260px;
+    height: calc(100vh - 40px);
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    transition: all 0.3s ease;
+}
+
+.sidebar-logo {
+    margin-bottom: 48px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.user-badge {
+    font-size: 0.75rem;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 2px 10px;
+    border-radius: 20px;
+    color: var(--text-muted);
+}
+
+.sidebar-logo h2 {
+    font-size: 1.5rem;
+    background: linear-gradient(135deg, #818cf8 0%, #c084fc 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.sidebar-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex-grow: 1;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px;
+    border-radius: 12px;
+    text-decoration: none;
+    color: var(--text-muted);
+    transition: all 0.3s ease;
+}
+
+.nav-item:hover {
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--text-main);
+}
+
+.nav-item.active {
+    background: var(--primary);
+    color: white;
+    box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+}
+
+.sidebar-footer {
+    margin-top: auto;
+}
+
+.logout-btn {
+    width: 100%;
+}
+
+.logout-btn:hover {
+    color: var(--danger);
+    border-color: var(--danger);
+    background: rgba(239, 68, 68, 0.05);
+}
+
+/* Sidebar Responsive Queries */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        margin: 0;
+        border-radius: 0;
+        border: none;
+        border-bottom: 1px solid var(--border);
+        flex-direction: row;
+        align-items: center;
+        padding: 10px 15px;
+        z-index: 100;
+        background: var(--bg-card);
+        /* Ensure visibility */
+    }
+
+    .sidebar-logo {
+        margin-bottom: 0;
+        flex-direction: row;
+        gap: 8px;
+    }
+
+    .sidebar-logo h2 {
+        font-size: 1.1rem;
+        white-space: nowrap;
+    }
+
+    .user-badge {
+        display: none;
+    }
+
+    .sidebar-nav {
+        flex-direction: row;
+        gap: 5px;
+        overflow-x: auto;
+        padding: 0 10px;
+        scrollbar-width: none;
+        /* Hide scrollbar Firefox */
+    }
+
+    .sidebar-nav::-webkit-scrollbar {
+        display: none;
+        /* Hide scrollbar Chrome/Safari */
+    }
+
+    .nav-item {
+        padding: 8px;
+    }
+
+    .nav-item span {
+        display: none;
+    }
+
+    .sidebar-footer {
+        margin-top: 0;
+        margin-left: auto;
+    }
+
+    .logout-btn {
+        width: auto;
+        padding: 8px;
+    }
+
+    .logout-btn span {
+        display: none;
+    }
+}

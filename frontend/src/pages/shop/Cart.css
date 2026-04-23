@@ -1,0 +1,141 @@
+.cart-page h1 {
+    margin-bottom: 32px;
+}
+
+.cart-grid {
+    display: grid;
+    grid-template-columns: 1fr 380px;
+    gap: 32px;
+    align-items: start;
+}
+
+.cart-items-section {
+    padding: 0;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    padding: 24px;
+    border-bottom: 1px solid var(--border);
+    gap: 24px;
+}
+
+.cart-item:last-child {
+    border-bottom: none;
+}
+
+.item-info {
+    flex-grow: 1;
+}
+
+.item-info h3 {
+    margin-bottom: 8px;
+}
+
+.item-info .price {
+    color: var(--text-muted);
+}
+
+.item-qty {
+    width: 100px;
+}
+
+.item-total {
+    width: 120px;
+    text-align: right;
+    font-size: 1.1rem;
+}
+
+.remove-btn {
+    background: transparent;
+    border: none;
+    color: var(--text-muted);
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.remove-btn:hover {
+    color: var(--danger);
+}
+
+.checkout-section {
+    padding: 32px;
+    position: sticky;
+    top: 100px;
+}
+
+.checkout-section h3 {
+    margin-bottom: 24px;
+}
+
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+    color: var(--text-muted);
+}
+
+.summary-total {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 24px;
+    padding-top: 24px;
+    border-top: 1px solid var(--border);
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 32px;
+}
+
+.checkout-form {
+    margin-top: 24px;
+}
+
+.checkout-actions {
+    display: flex;
+    gap: 12px;
+    margin-top: 24px;
+}
+
+.checkout-actions .btn {
+    flex-grow: 1;
+}
+
+.empty-cart {
+    text-align: center;
+    padding: 60px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Cart Responsive Queries */
+@media (max-width: 1024px) {
+    .cart-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .checkout-section {
+        position: static;
+    }
+}
+
+@media (max-width: 768px) {
+    .cart-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+        padding: 20px;
+    }
+
+    .item-qty,
+    .item-total {
+        width: 100%;
+        text-align: left;
+    }
+
+    .checkout-section {
+        padding: 20px;
+    }
+}

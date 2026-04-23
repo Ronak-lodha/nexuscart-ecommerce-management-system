@@ -1,0 +1,150 @@
+.my-orders-page h1 {
+    margin-bottom: 32px;
+}
+
+.orders-container {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.no-orders {
+    padding: 60px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    color: var(--text-muted);
+}
+
+.customer-order-card {
+    padding: 0;
+}
+
+.order-header {
+    padding: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--border);
+}
+
+.id-date h3 {
+    margin-bottom: 4px;
+}
+
+.id-date span {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+.status-indicator {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 6px 16px;
+    border-radius: 30px;
+}
+
+.order-items {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.order-line-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.line-info {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.line-info span {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+.line-total {
+    font-weight: 600;
+}
+
+.order-footer {
+    padding: 20px 24px;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.address {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    max-width: 50%;
+}
+
+.total {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.total span {
+    color: var(--text-muted);
+}
+
+.total strong {
+    font-size: 1.25rem;
+    color: var(--accent);
+}
+
+.order-footer-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Orders Responsive Queries */
+@media (max-width: 768px) {
+    .order-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+        padding: 20px;
+    }
+
+    .order-footer {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .address {
+        max-width: 100%;
+    }
+
+    .order-footer-actions {
+        width: 100%;
+        justify-content: space-between;
+    }
+}
+
+@media (max-width: 480px) {
+    .order-line-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+}

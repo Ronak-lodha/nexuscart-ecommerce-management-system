@@ -1,0 +1,175 @@
+.detail-container {
+    padding: 40px;
+}
+
+.back-btn {
+    background: transparent;
+    border: none;
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    margin-bottom: 24px;
+    transition: color 0.3s ease;
+}
+
+.back-btn:hover {
+    color: var(--primary);
+}
+
+.profile-grid {
+    display: grid;
+    grid-template-columns: 350px 1fr;
+    gap: 32px;
+    margin-top: 32px;
+}
+
+.profile-card {
+    padding: 32px;
+    height: fit-content;
+}
+
+.profile-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 16px;
+    margin-bottom: 40px;
+}
+
+.profile-avatar {
+    width: 100px;
+    height: 100px;
+    background: rgba(99, 102, 241, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary);
+}
+
+.profile-title h2 {
+    margin-bottom: 8px;
+}
+
+.profile-info {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-bottom: 40px;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    color: var(--text-muted);
+}
+
+.info-item div {
+    display: flex;
+    flex-direction: column;
+}
+
+.info-item label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.info-item span {
+    color: var(--text-main);
+    font-weight: 500;
+}
+
+.profile-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.stat-box {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    text-align: center;
+}
+
+.stat-box strong {
+    font-size: 1.2rem;
+    display: block;
+}
+
+.stat-box span {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+}
+
+.order-history {
+    padding: 32px;
+}
+
+.order-history h3 {
+    margin-bottom: 24px;
+}
+
+.orders-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.order-item {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.order-main {
+    display: flex;
+    gap: 40px;
+}
+
+.order-id,
+.order-amount {
+    display: flex;
+    flex-direction: column;
+}
+
+.order-id span,
+.order-amount span {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}
+
+.order-sub {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.order-pay {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.85rem;
+}
+
+.text-accent {
+    color: var(--accent);
+}
+
+.text-danger {
+    color: var(--danger);
+}
+
+.no-data {
+    text-align: center;
+    color: var(--text-muted);
+    padding: 40px;
+}
