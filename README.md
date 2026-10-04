@@ -1,4 +1,4 @@
-# E-Commerce Management System
+# NexusCart ——— E-Commerce Management System
 
 A full-stack management system built with **React** (Frontend) and **Django REST Framework** (Backend).
 
